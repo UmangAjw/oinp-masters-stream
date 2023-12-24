@@ -11,6 +11,11 @@ body {
 }
 .oinp_content {
   padding: 20px;
+  padding-top: 0;
+}
+.oinp_content_calc p {
+  font-size: 24px;
+  font-weight: bold;
 }
 .calc_table,
 .calc_table tr,
@@ -20,6 +25,14 @@ body {
   border-collapse: collapse;
   text-align: left;
   padding: 5px;
+  border-left: 0;
+  border-right: 0;
+}
+.calc_table td {
+  border-color: rgb(161, 161, 161);
+}
+.calc_table th {
+  border-width: 2px;
 }
 .calc_table {
   max-width: 600px;
@@ -44,13 +57,40 @@ body {
   outline: none;
   cursor: pointer;
 }
+.calc_table select option {
+  background-color: pink;
+  white-space: break-spaces;
+}
 .calc_table tr:not(:first-child) td + td {
   text-align: right;
 }
-.calc_table tr:first-child {
+/* .calc_table tr:first-child {
   background-color: #5b95fa;
   color: white;
-}
+} */
 .calc_table tr:nth-child(odd):not(:first-child) {
-  background-color: rgba(90, 149, 250, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.oinp_history {
+  max-width: 600px;
+}
+#oinp_history_img {
+  width: 100%;
+}
+.oinp_history p:first-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+.oinp_history a {
+  text-decoration: none;
+}
+.oinp_history a > * {
+  cursor: pointer;
+  margin: 1px 0 0 0;
+  padding: 0;
+  color: rgba(90, 149, 250, 1);
+  font-size: 14px !important;
+}
+.oinp_history p:last-child span {
+  text-decoration: underline;
 }
