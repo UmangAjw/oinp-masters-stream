@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OINP Masters Graduate Stream</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div class="oinp_navbar">OINP Masters Graduate Stream</div>
+    <div class="oinp_content">
+      <div class="oinp_content_calc">
+        <table class="calc_table">
+          <tr>
+            <th class="calc_table_factors">Scoring factors</th>
+            <th class="calc_table_options">Option applicable</th>
+            <th class="calc_table_points">Points</th>
+          </tr>
+          <tr>
+            <td>Work or study permit status</td>
+            <td>
+              <select
+                onchange="getStatusPoints()"
+                name="calc_status"
+                id="calc_status"
+              >
+                <option value="0" disabled selected value>
+                  -- select an option --
+                </option>
+                <option value="10">With valid work or study permit</option>
+                <option value="0">Without valid work or study permit</option>
+              </select>
+            </td>
+            <td id="calc_status_points">0</td>
+          </tr>
+          <tr>
+            <td>Earnings history</td>
+            <td>
+              <select
+                onchange="getEarningsPoints()"
+                name="calc_earnings"
+                id="calc_earnings"
+              >
+                <option disabled selected value>-- select an option --</option>
+                <option value="3">$40k or more earnings in a year</option>
+                <option value="0">Less than $40k earnings in a year</option>
+              </select>
+            </td>
+            <td id="calc_earnings_points">0</td>
+          </tr>
+          <tr>
+            <td>Highest level of education</td>
+            <td>
+              <select
+                onchange="getEducationPoints()"
+                name="calc_education"
+                id="calc_education"
+              >
+                <option disabled selected value>-- select an option --</option>
+                <option value="10">PhD</option>
+                <option value="8">Masters</option>
+                <option value="6">Bachelors</option>
+                <option value="5">College diploma</option>
+                <option value="0">Less than college</option>
+              </select>
+            </td>
+            <td id="calc_education_points">0</td>
+          </tr>
+          <tr>
+            <td>Field of study</td>
+            <td>
+              <select
+                onchange="getFieldStudyPoints()"
+                name="calc_study_field"
+                id="calc_study_field"
+              >
+                <option disabled selected value>-- select an option --</option>
+                <option value="12">STEM/Health and trades</option>
+                <option value="6">
+                  Business and administration, social, legal, education,
+                  behavioral science, personal, security and transport services,
+                  social work and related programs
+                </option>
+                <option value="0">
+                  Arts and humanities, BHASE programs, n.e.c
+                </option>
+              </select>
+            </td>
+            <td id="calc_study_field_points">0</td>
+          </tr>
+          <tr>
+            <td>Canadian education experience</td>
+            <td>
+              <select
+                onchange="getEducationCountPoints()"
+                name="calc_cred"
+                id="calc_cred"
+              >
+                <option disabled selected value>-- select an option --</option>
+                <option value="10">More than one Canadian credential</option>
+                <option value="5">One Canadian credential</option>
+              </select>
+            </td>
+            <td id="calc_cred_points">0</td>
+          </tr>
+          <tr>
+            <td>Official language ability</td>
+            <td>
+              <select onchange="getCLBPoints()" name="calc_clb" id="calc_clb">
+                <option disabled selected value>-- select an option --</option>
+                <option value="10">CLB 9 or higher</option>
+                <option value="6">CLB 8</option>
+                <option value="4">CLB 7</option>
+                <option value="0">CLB 6 or low</option>
+              </select>
+            </td>
+            <td id="calc_clb_points">0</td>
+          </tr>
+          <tr>
+            <td>Knowledge of official languages</td>
+            <td>
+              <select
+                onchange="getlLanguageCountPoints()"
+                name="calc_lang_count"
+                id="calc_lang_count"
+              >
+                <option disabled selected value>-- select an option --</option>
+                <option value="10">2 Official Languages</option>
+                <option value="5">1 Official Language</option>
+              </select>
+            </td>
+            <td id="calc_lang_count_points">0</td>
+          </tr>
+          <tr>
+            <td>Location of study</td>
+            <td>
+              <select
+                onchange="getLocationPoints()"
+                name="calc_location"
+                id="calc_location"
+              >
+                <option disabled selected value>-- select an option --</option>
+                <option value="10">Northern Ontario</option>
+                <option value="8">
+                  Other areas outside GTA (except Northern Ontario)
+                </option>
+                <option value="3">Inside GTA (except Toronto)</option>
+                <option value="0">Toronto</option>
+                <option value="0">
+                  Credential was completed without physically attending
+                  (in-person) classes
+                </option>
+              </select>
+            </td>
+            <td id="calc_location_points">0</td>
+          </tr>
+          <tr class="calc_total">
+            <td colspan="2">Total points</td>
+            <td id="calc_total_points">0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="oinp_footer"></div>
+  </body>
+</html>

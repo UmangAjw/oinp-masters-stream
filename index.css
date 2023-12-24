@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.oinp_navbar {
+  color: white;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  font-size: 25px;
+}
+.oinp_content {
+  padding: 20px;
+}
+.calc_table,
+.calc_table tr,
+.calc_table td,
+.calc_table th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 5px;
+}
+.calc_table {
+  max-width: 600px;
+}
+.calc_table_factors {
+  width: 37%;
+}
+.calc_table_options {
+  width: 48%;
+}
+.calc_table_points {
+  width: 15%;
+}
+.calc_total td {
+  text-align: center;
+  font-weight: bold;
+}
+.oinp_content_calc select {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.calc_table tr:not(:first-child) td + td {
+  text-align: right;
+}
+.calc_table tr:first-child {
+  background-color: #5b95fa;
+  color: white;
+}
+.calc_table tr:nth-child(odd):not(:first-child) {
+  background-color: rgba(90, 149, 250, 0.2);
+}
